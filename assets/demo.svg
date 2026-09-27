@@ -1,0 +1,110 @@
+<svg fill="none" viewBox="0 0 1000 440" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .term-container {
+          background: #080C16;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+          font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+          color: #E2E8F0;
+          padding: 24px;
+          box-sizing: border-box;
+          height: 440px;
+          font-size: 13px;
+          line-height: 1.6;
+          position: relative;
+        }
+
+        .term-bar {
+          display: flex;
+          align-items: center;
+          margin-bottom: 18px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          padding-bottom: 12px;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+
+        .term-title {
+          color: #94A3B8;
+          font-size: 12px;
+          margin-left: 12px;
+          letter-spacing: 0.5px;
+        }
+
+        .term-line {
+          margin-bottom: 8px;
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .prompt-symbol { color: #00D09C; font-weight: bold; }
+        .vera-badge { background: #00D09C; color: #080C16; font-weight: bold; padding: 1px 6px; border-radius: 3px; font-size: 11px; }
+        .mx-badge { background: #3B82F6; color: #FFFFFF; font-weight: bold; padding: 1px 6px; border-radius: 3px; font-size: 11px; }
+        .warn-badge { background: #F59E0B; color: #080C16; font-weight: bold; padding: 1px 6px; border-radius: 3px; font-size: 11px; }
+        .score-box {
+          background: rgba(0, 208, 156, 0.08);
+          border: 1px solid rgba(0, 208, 156, 0.3);
+          border-radius: 8px;
+          padding: 10px 16px;
+          margin-top: 14px;
+          color: #34D399;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      </style>
+
+      <div class="term-container">
+        <div class="term-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="term-title">vera-engine@edge-runtime: /eval/live-replay</span>
+        </div>
+
+        <div class="term-line">
+          <span class="prompt-symbol">$</span>
+          <span style="color: #F8FAFC;">python judge_simulator.py --scenario multi_turn_intent_switch</span>
+        </div>
+
+        <div class="term-line">
+          <span class="vera-badge">VERA [TICK]</span>
+          <span style="color: #CBD5E1;">"Dr. Meera, JIDA ke Oct issue mein 3-month fluoride varnish recall pe new guidance aayi hai. Aapke clinic ke 78 lapsed patients ke liye draft WhatsApp nudge ready hai. Dekhna chahengi?"</span>
+        </div>
+
+        <div class="term-line">
+          <span class="mx-badge">MERCHANT</span>
+          <span style="color: #93C5FD;">"Aapki jaankari ke liye shukriya. Main ek automated business assistant hoon..."</span>
+        </div>
+
+        <div class="term-line">
+          <span class="warn-badge">DETECTED</span>
+          <span style="color: #FCD34D;">Auto-reply signature matched (confidence: 99.4%). Backing off 14,400s (no spam penalty).</span>
+        </div>
+
+        <div class="term-line" style="margin-top: 6px;">
+          <span class="mx-badge">MERCHANT</span>
+          <span style="color: #93C5FD;">"Actually Meera here. Haan send karo details, mujhe ye run karna hai."</span>
+        </div>
+
+        <div class="term-line">
+          <span class="vera-badge">VERA [ACTION]</span>
+          <span style="color: #A7F3D0;">[Zero qualification questions asked] "Done Dr. Meera! 78 lapsed patients ke liye campaign draft staged. Click approve to dispatch: magicpin.in/c/meera-fluoride"</span>
+        </div>
+
+        <div class="score-box">
+          <span>🏆 BENCHMARK EVALUATION: 50 / 50 (100% EXCELLENT)</span>
+          <span style="font-family: monospace; font-size: 11px; color: #00D09C;">LATENCY: 4.8ms | STATUS: PROD READY</span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
